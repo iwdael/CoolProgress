@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <com.absurd.customprogress.LineProgressBar
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:max="100"
+            app:progress="20"
+            app:progressDesc="已售"
+            app:progressRadius="8dp" />
+
+        <com.absurd.customprogress.LineProgressBar
+            android:id="@+id/line_progresbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
+            app:lineborderWidth="2dp"
+            app:progressRadius="14dp" />
+
+        <com.absurd.customprogress.LineProgressBar
+            android:id="@+id/line_progresbar2"
+            android:layout_width="120dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="50dp"
+            app:isShowDesc="false"
+            app:lineborderWidth="2dp"
+            app:progressRadius="4dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_arc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.absurd.customprogress.ArcProgress
+                android:id="@+id/myProgress"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:degree="0"
+                app:progressStyle="arc" />
+
+
+            <com.absurd.customprogress.ArcProgress
+                android:id="@+id/myProgress01"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:arcprogressColor="#a56b75"
+                app:radius="80dp"
+                app:tickDensity="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.absurd.customprogress.ArcProgress
+                android:id="@+id/myProgress02"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:arcCapRound="true"
+                app:arcprogressColor="#febf82"
+                app:degree="180"
+                app:progressStyle="arc"
+                app:radius="90dp"
+                app:tickDensity="3" />
+
+
+            <com.absurd.customprogress.ArcProgress
+                android:id="@+id/myProgress03"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_toRightOf="@id/myProgress"
+                app:arcprogressColor="@color/progressColorGray"
+                app:degree="0"
+                app:progressStyle="tick"
+                app:radius="80dp"
+                app:tickDensity="3" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.absurd.customprogress.SectorProgress
+            android:id="@+id/sectorProgress"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:circleWidth="25dp"
+            app:lineWidth="2dp" />
+
+        <com.absurd.customprogress.SectorProgress
+            android:id="@+id/sectorProgress1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            app:circleWidth="75dp"
+            app:percentTextColor="@android:color/white"
+            app:percentTextSize="50sp"
+            app:symbolSize="30sp"
+            app:underColor="#E0E0E0" />
+    </LinearLayout>
+
+</RelativeLayout>
