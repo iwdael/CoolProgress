@@ -20,6 +20,6 @@ Add it in your root build.gradle at the end of repositories:
 
 ---
 ---
-![](http://i4.bvimg.com/602270/e76fb365d5d26a89.png)
-![](http://i4.bvimg.com/602270/a96b0a0d52ecb9cf.png)
-![](http://i4.bvimg.com/602270/5438f254668c12bd.png)
+![](https://github.com/mr-absurd/CustomProgress/blob/master/5438f254668c12bd.png)
+![](https://github.com/mr-absurd/CustomProgress/blob/master/a96b0a0d52ecb9cf.png)
+![](https://github.com/mr-absurd/CustomProgress/blob/master/e76fb365d5d26a89.png)
