@@ -1,4 +1,4 @@
-package com.absurd.demo_customprogress;
+package com.aliletter.demo_customprogress;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

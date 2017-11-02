@@ -1,4 +1,4 @@
-package com.absurd.customprogress;
+package com.aliletter.customprogress;
 
 
 import android.animation.Animator;

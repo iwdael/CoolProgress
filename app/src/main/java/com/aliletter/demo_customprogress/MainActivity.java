@@ -1,4 +1,4 @@
-package com.absurd.demo_customprogress;
+package com.aliletter.demo_customprogress;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,11 +16,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.absurd.customprogress.ArcProgress;
-import com.absurd.customprogress.LineProgressBar;
-import com.absurd.customprogress.OnTextCenter;
-import com.absurd.customprogress.SectorProgress;
-import com.absurd.customprogress.onImageCenter;
+import com.aliletter.customprogress.ArcProgress;
+import com.aliletter.customprogress.LineProgressBar;
+import com.aliletter.customprogress.OnTextCenter;
+import com.aliletter.customprogress.SectorProgress;
+import com.aliletter.customprogress.onImageCenter;
 
 public class MainActivity extends AppCompatActivity {
 
