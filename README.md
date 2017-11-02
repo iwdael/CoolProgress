@@ -1,4 +1,4 @@
-# CustomProgress
+# CustomProgress  [![](https://jitpack.io/v/aliletter/customprogress.svg)](https://jitpack.io/#aliletter/customprogress)
 CustomProgress is a display of the Andrews framework, it has a linear, round, fan-shaped.
 # How to
 To get a Git project into your build:
@@ -15,11 +15,11 @@ Add it in your root build.gradle at the end of repositories:
 ## Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.mr-absurd:customprogress:v1.0.1'
+	        compile 'com.github.aliletter:customprogress:v1.0.1'
 	}
 
 ---
 ---
-![](https://github.com/mr-absurd/CustomProgress/blob/master/5438f254668c12bd.png)
-![](https://github.com/mr-absurd/CustomProgress/blob/master/a96b0a0d52ecb9cf.png)
-![](https://github.com/mr-absurd/CustomProgress/blob/master/e76fb365d5d26a89.png)
+![](https://github.com/aliletter/CustomProgress/blob/master/5438f254668c12bd.png)
+![](https://github.com/aliletter/CustomProgress/blob/master/a96b0a0d52ecb9cf.png)
+![](https://github.com/aliletter/CustomProgress/blob/master/e76fb365d5d26a89.png)
