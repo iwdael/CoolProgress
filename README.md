@@ -1,6 +1,6 @@
 # CustomProgress  [![](https://jitpack.io/v/aliletter/customprogress.svg)](https://jitpack.io/#aliletter/customprogress)
 CustomProgres is a progress display control, it provides three different styles of progressbar, respectively, linear, circular, arc.[中文文档](https://github.com/aliletter/CustomProgress/blob/master/README_CHINESE.md)
-##Instruction
+## Instruction
 The use of CustomProgres and the use of ordinary progressbr and not much difference, it is more flexible to use, adding some custom properties.
 ### Code Sample
 LineProgressBar
