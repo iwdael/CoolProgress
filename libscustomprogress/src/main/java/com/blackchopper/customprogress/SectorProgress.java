@@ -1,4 +1,4 @@
-package com.aliletter.customprogress;
+package com.blackchopper.customprogress;
 
 import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
@@ -15,6 +15,8 @@ import android.graphics.SweepGradient;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
+
+import com.blackchopper.customprogress.R;
 
 public class SectorProgress extends View {
 

@@ -1,4 +1,4 @@
-package com.aliletter.customprogress;
+package com.blackchopper.customprogress;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

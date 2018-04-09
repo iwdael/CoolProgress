@@ -1,4 +1,4 @@
-package com.aliletter.demo_customprogress;
+package com.blackchopper.demo_customprogress;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,11 +16,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.aliletter.customprogress.ArcProgress;
-import com.aliletter.customprogress.LineProgressBar;
-import com.aliletter.customprogress.OnTextCenter;
-import com.aliletter.customprogress.SectorProgress;
-import com.aliletter.customprogress.onImageCenter;
+import com.blackchopper.customprogress.ArcProgress;
+import com.blackchopper.customprogress.LineProgressBar;
+import com.blackchopper.customprogress.OnTextCenter;
+import com.blackchopper.customprogress.SectorProgress;
+import com.blackchopper.customprogress.onImageCenter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,23 +37,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.blackchopper.demo_customprogress.R.layout.activity_main);
 
-        ll_line= (LinearLayout) findViewById(R.id.ll_line);
-        ll_arc= (LinearLayout) findViewById(R.id.ll_arc);
-        ll_sector= (LinearLayout) findViewById(R.id.ll_sector);
+        ll_line= (LinearLayout) findViewById(com.blackchopper.demo_customprogress.R.id.ll_line);
+        ll_arc= (LinearLayout) findViewById(com.blackchopper.demo_customprogress.R.id.ll_arc);
+        ll_sector= (LinearLayout) findViewById(com.blackchopper.demo_customprogress.R.id.ll_sector);
 
-        mProgressBar = (LineProgressBar) findViewById(R.id.line_progresbar);
-        mProgressBar2 = (LineProgressBar) findViewById(R.id.line_progresbar2);
+        mProgressBar = (LineProgressBar) findViewById(com.blackchopper.demo_customprogress.R.id.line_progresbar);
+        mProgressBar2 = (LineProgressBar) findViewById(com.blackchopper.demo_customprogress.R.id.line_progresbar2);
 
-        mProgress = (ArcProgress) findViewById(R.id.myProgress);
-        mProgress1 = (ArcProgress) findViewById(R.id.myProgress01);
-        mProgress02 = (ArcProgress) findViewById(R.id.myProgress02);
-        mProgress03 = (ArcProgress) findViewById(R.id.myProgress03);
+        mProgress = (ArcProgress) findViewById(com.blackchopper.demo_customprogress.R.id.myProgress);
+        mProgress1 = (ArcProgress) findViewById(com.blackchopper.demo_customprogress.R.id.myProgress01);
+        mProgress02 = (ArcProgress) findViewById(com.blackchopper.demo_customprogress.R.id.myProgress02);
+        mProgress03 = (ArcProgress) findViewById(com.blackchopper.demo_customprogress.R.id.myProgress03);
 
 
-        mView1 = (SectorProgress) findViewById(R.id.sectorProgress);
-        mView2 = (SectorProgress) findViewById(R.id.sectorProgress1);
+        mView1 = (SectorProgress) findViewById(com.blackchopper.demo_customprogress.R.id.sectorProgress);
+        mView2 = (SectorProgress) findViewById(com.blackchopper.demo_customprogress.R.id.sectorProgress1);
 
         showLine();
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(com.blackchopper.demo_customprogress.R.menu.menu_main, menu);
         return true;
     }
 
@@ -74,18 +74,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_line) {
+        if (id == com.blackchopper.demo_customprogress.R.id.action_line) {
             Toast.makeText(MainActivity.this,"直线型",Toast.LENGTH_SHORT).show();
 
             showLine();
 
             return true;
-        }else if(id == R.id.action_arc) {
+        }else if(id == com.blackchopper.demo_customprogress.R.id.action_arc) {
             Toast.makeText(MainActivity.this,"圆形",Toast.LENGTH_SHORT).show();
 
             showArc();
             return true;
-        }else if(id == R.id.action_sector) {
+        }else if(id == com.blackchopper.demo_customprogress.R.id.action_sector) {
             Toast.makeText(MainActivity.this,"扇形",Toast.LENGTH_SHORT).show();
 
             showSector();
@@ -130,14 +130,14 @@ public class MainActivity extends AppCompatActivity {
             public void draw(Canvas canvas, RectF rectF, float x, float y, float storkeWidth, int progress) {
                 Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
                 textPaint.setStrokeWidth(35);
-                textPaint.setColor(getResources().getColor(R.color.textColor));
+                textPaint.setColor(getResources().getColor(com.blackchopper.demo_customprogress.R.color.textColor));
                 String progressStr = String.valueOf(progress+"%");
                 float textX = x-(textPaint.measureText(progressStr)/2);
                 float textY = y-((textPaint.descent()+textPaint.ascent())/2);
                 canvas.drawText(progressStr,textX,textY,textPaint);
             }
         });
-        mProgress03.setOnCenterDraw(new onImageCenter(this,R.mipmap.git));
+        mProgress03.setOnCenterDraw(new onImageCenter(this, com.blackchopper.demo_customprogress.R.mipmap.git));
         addProrgress(mProgress);
         addProrgress(mProgress1);
         addProrgress(mProgress02);

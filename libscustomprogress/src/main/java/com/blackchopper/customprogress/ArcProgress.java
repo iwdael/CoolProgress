@@ -1,4 +1,4 @@
-package com.aliletter.customprogress;
+package com.blackchopper.customprogress;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.widget.ProgressBar;
 
-
+import com.blackchopper.customprogress.R;
 
 
 public class ArcProgress extends ProgressBar {

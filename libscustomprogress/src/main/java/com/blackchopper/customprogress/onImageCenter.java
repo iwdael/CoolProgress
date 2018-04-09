@@ -1,4 +1,4 @@
-package com.aliletter.customprogress;
+package com.blackchopper.customprogress;
 
 import android.content.Context;
 import android.graphics.Bitmap;

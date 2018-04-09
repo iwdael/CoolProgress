@@ -1,11 +1,11 @@
-# CustomProgress  [![](https://jitpack.io/v/aliletter/customprogress.svg)](https://jitpack.io/#aliletter/customprogress)
+# CustomProgress  [![](https://jitpack.io/v/blackchopper/customprogress.svg)](https://jitpack.io/#blackchopper/customprogress)
 CustomProgres是一个进度展示控件，它提供了三种不同风格的progressbar，分别为直线型，圆形，弧形。
 ## 使用说明
 CustomProgres的使用方法和普通的progressbr的使用方法并没有太大区别，它使用更加灵活，增加了一些自定义属性。
 ### 代码示例
 线型进度条
 ```Java
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
 
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -15,7 +15,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
             app:progressDesc="已售"
             app:progressRadius="8dp" />
 
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
             android:id="@+id/line_progresbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -23,7 +23,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
             app:lineborderWidth="2dp"
             app:progressRadius="14dp" />
 
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
             android:id="@+id/line_progresbar2"
             android:layout_width="120dp"
             android:layout_height="10dp"
@@ -34,7 +34,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```
 圆形进度条
 ```Java
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -42,7 +42,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:progressStyle="arc" />
 
 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress01"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
@@ -50,7 +50,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:radius="80dp"
                 app:tickDensity="3" />
                 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress02"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
@@ -62,7 +62,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:tickDensity="3" />
 
 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress03"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -76,14 +76,14 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```
 弧型进度条
 ```Java
-        <com.aliletter.customprogress.SectorProgress
+        <com.blackchopper.customprogress.SectorProgress
             android:id="@+id/sectorProgress"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:circleWidth="25dp"
             app:lineWidth="2dp" />
 
-        <com.aliletter.customprogress.SectorProgress
+        <com.blackchopper.customprogress.SectorProgress
             android:id="@+id/sectorProgress1"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -102,7 +102,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ## 如何配置
 将本仓库引入你的项目:
 ### Step 1. 添加JitPack仓库到Build文件
-合并以下代码到项目根目录下的build.gradle文件的repositories尾。[点击查看详情](https://github.com/aliletter/CarouselBanner/blob/master/root_build.gradle.png)
+合并以下代码到项目根目录下的build.gradle文件的repositories尾。[点击查看详情](https://github.com/blackchopper/CarouselBanner/blob/master/root_build.gradle.png)
 
 	allprojects {
 		repositories {
@@ -112,17 +112,17 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 	}
   
 ### Step 2. 添加依赖
-合并以下代码到需要使用的application Module的dependencies尾。[点击查看详情](https://github.com/aliletter/CarouselBanner/blob/master/application_build.gradle.png)
+合并以下代码到需要使用的application Module的dependencies尾。[点击查看详情](https://github.com/blackchopper/CarouselBanner/blob/master/application_build.gradle.png)
 ```Java
 	dependencies {
 	  ...
-          compile 'com.github.aliletter:customprogress:v1.0.2'
+          compile 'com.github.blackchopper:customprogress:v1.0.3'
 	}
 ```	
 <br><br>
-![Text Image](https://github.com/aliletter/CustomProgress/blob/master/customprogress.gif)
+![Text Image](https://github.com/blackchopper/CustomProgress/blob/master/customprogress.gif)
 <br><br><br>
 ## 感谢浏览
 如果你有任何疑问，请加入QQ群，我将竭诚为你解答。欢迎Star和Fork本仓库，当然也欢迎你关注我。
 <br>
-![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/qq_group.png)
+![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/qq_group.png)

@@ -1,11 +1,11 @@
-# CustomProgress  [![](https://jitpack.io/v/aliletter/customprogress.svg)](https://jitpack.io/#aliletter/customprogress)
-CustomProgres is a progress display control, it provides three different styles of progressbar, respectively, linear, circular, arc.[中文文档](https://github.com/aliletter/CustomProgress/blob/master/README_CHINESE.md)
+# CustomProgress  [![](https://jitpack.io/v/blackchopper/customprogress.svg)](https://jitpack.io/#blackchopper/customprogress)
+CustomProgres is a progress display control, it provides three different styles of progressbar, respectively, linear, circular, arc.[中文文档](https://github.com/blackchopper/CustomProgress/blob/master/README_CHINESE.md)
 ## Instruction
 The use of CustomProgres and the use of ordinary progressbr and not much difference, it is more flexible to use, adding some custom properties.
 ### Code Sample
 LineProgressBar
 ```Java
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
 
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -15,7 +15,7 @@ LineProgressBar
             app:progressDesc="已售"
             app:progressRadius="8dp" />
 
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
             android:id="@+id/line_progresbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -23,7 +23,7 @@ LineProgressBar
             app:lineborderWidth="2dp"
             app:progressRadius="14dp" />
 
-        <com.aliletter.customprogress.LineProgressBar
+        <com.blackchopper.customprogress.LineProgressBar
             android:id="@+id/line_progresbar2"
             android:layout_width="120dp"
             android:layout_height="10dp"
@@ -34,7 +34,7 @@ LineProgressBar
 ```
 ArcProgress
 ```Java
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -42,7 +42,7 @@ ArcProgress
                 app:progressStyle="arc" />
 
 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress01"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
@@ -50,7 +50,7 @@ ArcProgress
                 app:radius="80dp"
                 app:tickDensity="3" />
                 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress02"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
@@ -62,7 +62,7 @@ ArcProgress
                 app:tickDensity="3" />
 
 
-            <com.aliletter.customprogress.ArcProgress
+            <com.blackchopper.customprogress.ArcProgress
                 android:id="@+id/myProgress03"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -76,14 +76,14 @@ ArcProgress
 ```
 SectorProgress
 ```Java
-        <com.aliletter.customprogress.SectorProgress
+        <com.blackchopper.customprogress.SectorProgress
             android:id="@+id/sectorProgress"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:circleWidth="25dp"
             app:lineWidth="2dp" />
 
-        <com.aliletter.customprogress.SectorProgress
+        <com.blackchopper.customprogress.SectorProgress
             android:id="@+id/sectorProgress1"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -97,7 +97,7 @@ SectorProgress
 ## How to
 To get a Git project into your build:
 ### Step 1. Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories.[click here for details](https://github.com/aliletter/CarouselBanner/blob/master/root_build.gradle.png)
+Add it in your root build.gradle at the end of repositories.[click here for details](https://github.com/blackchopper/CarouselBanner/blob/master/root_build.gradle.png)
 
 	allprojects {
 		repositories {
@@ -107,17 +107,17 @@ Add it in your root build.gradle at the end of repositories.[click here for deta
 	}
   
 ### Step 2. Add the dependency
-Add it in your application module build.gradle at the end of dependencies where you want to use.   [click here for details](https://github.com/aliletter/CarouselBanner/blob/master/application_build.gradle.png)
+Add it in your application module build.gradle at the end of dependencies where you want to use.   [click here for details](https://github.com/blackchopper/CarouselBanner/blob/master/application_build.gradle.png)
 ```Java
 	dependencies {
 	  ...
-          compile 'com.github.aliletter:customprogress:v1.0.2'
+          compile 'com.github.blackchopper:customprogress:v1.0.3'
 	}
 ```	
 <br><br>
-![Text Image](https://github.com/aliletter/CustomProgress/blob/master/customprogress.gif)
+![Text Image](https://github.com/blackchopper/CustomProgress/blob/master/customprogress.gif)
 <br><br><br>
 ## Thank you for your browsing
 If you have any questions, please join the QQ group. I will do my best to answer it for you. Welcome to star and fork this repository, alse follow me.
 <br>
-![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/qq_group.png)
+![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/qq_group.png)
