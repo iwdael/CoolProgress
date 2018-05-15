@@ -379,8 +379,8 @@ public class LineProgressBar extends View {
                     anim.cancel();
                     return;
                 }
-                int pro = (int) animation.getAnimatedValue();
-                setProgress(pro);
+                float pro = (int) animation.getAnimatedValue();
+                setProgress((int) pro);
             }
         });
         anim.start();
