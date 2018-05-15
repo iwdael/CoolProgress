@@ -111,7 +111,7 @@ Add it in your application module build.gradle at the end of dependencies where 
 ```Java
 	dependencies {
 	  ...
-          compile 'com.github.blackchopper:customprogress:v1.0.9'
+          compile 'com.github.blackchopper:customprogress:v1.1.0'
 	}
 ```	
 <br><br>
