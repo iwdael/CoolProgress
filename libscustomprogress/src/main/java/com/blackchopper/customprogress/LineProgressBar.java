@@ -156,10 +156,10 @@ public class LineProgressBar extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mTouched = true;
-                setCurProgress((int) (event.getX() / getWidth() * getMax()));
+                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_MOVE:
-                setCurProgress((int) (event.getX() / getWidth() * getMax()));
+                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_UP:
                 if (mChangeListener != null) {
