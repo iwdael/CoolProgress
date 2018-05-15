@@ -4,6 +4,7 @@ package com.blackchopper.customprogress;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -359,17 +360,30 @@ public class LineProgressBar extends View {
      */
     public void setCurProgress(int progress) {
         if (mTouched) return;
-        ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(1500);
-        animator.addListener(new AnimatorListenerAdapter() {
+//        ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(1500);
+//        animator.addListener(new AnimatorListenerAdapter() {
+//            @Override
+//            public void onAnimationEnd(Animator animation) {
+//                super.onAnimationEnd(animation);
+//                if (mOnAnimationEndListener != null) {
+//                    mOnAnimationEndListener.onAnimationEnd();
+//                }
+//            }
+//        });
+//        animator.start();
+        final ValueAnimator anim = ValueAnimator.ofFloat(getProgress(), progress).setDuration(1500);
+        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                if (mOnAnimationEndListener != null) {
-                    mOnAnimationEndListener.onAnimationEnd();
+            public void onAnimationUpdate(ValueAnimator animation) {
+                if (mTouched){
+                    anim.cancel();
+                    return;
                 }
+                int pro = (int) animation.getAnimatedValue();
+                setProgress(pro);
             }
         });
-        animator.start();
+        anim.start();
     }
 
 
