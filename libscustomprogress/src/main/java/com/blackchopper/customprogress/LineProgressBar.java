@@ -156,12 +156,14 @@ public class LineProgressBar extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mTouched = true;
-                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
+
+                setProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_MOVE:
-                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
+                setProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_UP:
+                setProgress((int) (event.getX() / getWidth() * getMax()));
                 if (mChangeListener != null) {
                     mChangeListener.OnChange((int) (event.getX() / getWidth() * getMax()));
                 }
@@ -360,20 +362,6 @@ public class LineProgressBar extends View {
         animator.start();
     }
 
-    private void setTouchProgress(int progress) {
-
-        ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(1000);
-        animator.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                if (mOnAnimationEndListener != null) {
-                    mOnAnimationEndListener.onAnimationEnd();
-                }
-            }
-        });
-        animator.start();
-    }
 
     /**
      * 设置当前进度条的进度
