@@ -15,14 +15,16 @@ import android.graphics.RectF;
 import android.os.Looper;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.blackchopper.customprogress.R;
 
 
 public class LineProgressBar extends View {
-
+    public static final String TAG = LineProgressBar.class.getName();
     private Paint mPaint;
     private TextPaint mTextPaint;
 
@@ -32,7 +34,7 @@ public class LineProgressBar extends View {
     private int mMax;
     private int mProgress;
     private int mBorderWidth;
-    private boolean mIsShowDesc ;
+    private boolean mIsShowDesc;
 
     private int DEFAULT_MAX = 10;
     private int DEFAULT_PROGRESS = 0;
@@ -43,19 +45,27 @@ public class LineProgressBar extends View {
     private int DEFAULT_PROGRESS_DESC_COLOR = Color.parseColor("#B4B4B4");
     private int DEFAULT_BORDER_WIDTH = (int) TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics());
-    private boolean DEFAULT_ISSHOWDESC = true ;
+    private boolean DEFAULT_ISSHOWDESC = true;
 
     private int mWidth;
     private int mHeight;
     private Rect mTextBounds;
     private String mProgressDesc = "";
 
+    private boolean mTouched = false;
+
+
     private OnFinishedListener mOnFinishedListener;
     private OnAnimationEndListener mOnAnimationEndListener;
+    private OnProgressChangeListener mChangeListener;
 
+    public void setOnProgressChangeListener(OnProgressChangeListener listener) {
+        mChangeListener = listener;
+    }
 
     /**
      * set finish listener
+     *
      * @param onFinishedListener
      */
     public void setOnFinishedListener(OnFinishedListener onFinishedListener) {
@@ -64,9 +74,10 @@ public class LineProgressBar extends View {
 
     /**
      * set animation end listener
+     *
      * @param onAnimationEndListener
      */
-    public void setOnAnimationEndListener(OnAnimationEndListener onAnimationEndListener){
+    public void setOnAnimationEndListener(OnAnimationEndListener onAnimationEndListener) {
         mOnAnimationEndListener = onAnimationEndListener;
     }
 
@@ -101,7 +112,7 @@ public class LineProgressBar extends View {
                     DEFAULT_BORDER_WIDTH);
             mProgressDesc = a
                     .getString(R.styleable.LineProgressBar_progressDesc);
-            mIsShowDesc = a.getBoolean(R.styleable.LineProgressBar_isShowDesc,DEFAULT_ISSHOWDESC) ;
+            mIsShowDesc = a.getBoolean(R.styleable.LineProgressBar_isShowDesc, DEFAULT_ISSHOWDESC);
 
         } finally {
             a.recycle();
@@ -137,7 +148,33 @@ public class LineProgressBar extends View {
 
         drawBorder(canvas);
         drawProgress(canvas);
-        if (mIsShowDesc)  drawProgressDesc(canvas);
+        if (mIsShowDesc) drawProgressDesc(canvas);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                mTouched = true;
+                setCurProgress((int) (event.getX() / getWidth() * getMax()));
+                break;
+            case MotionEvent.ACTION_MOVE:
+                setCurProgress((int) (event.getX() / getWidth() * getMax()));
+                break;
+            case MotionEvent.ACTION_UP:
+                if (mChangeListener != null) {
+                    mChangeListener.OnChange((int) (event.getX() / getWidth() * getMax()));
+                }
+                mTouched = false;
+                break;
+            case MotionEvent.ACTION_CANCEL:
+                mTouched = false;
+                break;
+            default:
+                mTouched = false;
+                break;
+        }
+        return true;
     }
 
     private void drawBorder(Canvas canvas) {
@@ -272,7 +309,7 @@ public class LineProgressBar extends View {
         mProgress = progress > mMax ? mMax : progress;
         invalidateView();
 
-        if (mProgress>= mMax && mOnFinishedListener!=null) {
+        if (mProgress >= mMax && mOnFinishedListener != null) {
             mOnFinishedListener.onFinish();
         }
 
@@ -280,20 +317,22 @@ public class LineProgressBar extends View {
 
     /**
      * 得到ProgressBar的最大进度
+     *
      * @return
      */
     public int getMax() {
-        return mMax ;
+        return mMax;
 
     }
 
     /**
      * 获取当前ProgressBar的进度
+     *
      * @return
      */
     public final int getProgress() {
 
-        return  mProgress ;
+        return mProgress;
     }
 
     public void setProgressDesc(String desc) {
@@ -303,16 +342,32 @@ public class LineProgressBar extends View {
 
     /**
      * 设置当前进度条的进度(默认动画时间1.5s)
+     *
      * @param progress
      */
-    public void setCurProgress (final int progress) {
-
+    public void setCurProgress(int progress) {
+        if (mTouched) return;
         ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(1500);
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                if (mOnAnimationEndListener!=null) {
+                if (mOnAnimationEndListener != null) {
+                    mOnAnimationEndListener.onAnimationEnd();
+                }
+            }
+        });
+        animator.start();
+    }
+
+    private void setTouchProgress(int progress) {
+
+        ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(1000);
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                if (mOnAnimationEndListener != null) {
                     mOnAnimationEndListener.onAnimationEnd();
                 }
             }
@@ -322,17 +377,18 @@ public class LineProgressBar extends View {
 
     /**
      * 设置当前进度条的进度
+     *
      * @param progress 目标进度
      * @param duration 动画时长
      */
-    public void setCurProgress (final int progress,long duration) {
+    public void setCurProgress(final int progress, long duration) {
 
         ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress).setDuration(duration);
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                if (mOnAnimationEndListener!=null) {
+                if (mOnAnimationEndListener != null) {
                     mOnAnimationEndListener.onAnimationEnd();
                 }
             }
@@ -343,20 +399,22 @@ public class LineProgressBar extends View {
 
     /**
      * 设置ProgressBar的颜色
+     *
      * @param color
      */
-    public void setProgressColor(int color){
-        mProgressColor = color ;
+    public void setProgressColor(int color) {
+        mProgressColor = color;
         invalidateView();
     }
 
     /**
      * 设置是否显示当前进度
+     *
      * @param isShowDesc true:显示
      */
     public void setIsShowDesc(boolean isShowDesc) {
 
-        mIsShowDesc = isShowDesc ;
+        mIsShowDesc = isShowDesc;
         invalidateView();
     }
 
@@ -372,8 +430,13 @@ public class LineProgressBar extends View {
         void onFinish();
     }
 
-    public interface OnAnimationEndListener{
+    public interface OnAnimationEndListener {
         void onAnimationEnd();
     }
+
+    public interface OnProgressChangeListener {
+        void OnChange(int position);
+    }
+
 }
 
