@@ -116,7 +116,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```Java
 	dependencies {
 	  ...
-          compile 'com.github.blackchopper:customprogress:v1.0.3'
+          compile 'com.github.blackchopper:customprogress:v1.0.5'
 	}
 ```	
 <br><br>
