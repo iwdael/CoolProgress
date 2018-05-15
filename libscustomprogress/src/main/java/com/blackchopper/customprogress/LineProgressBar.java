@@ -156,14 +156,13 @@ public class LineProgressBar extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mTouched = true;
-
-                setProgress((int) (event.getX() / getWidth() * getMax()));
+                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_MOVE:
-                setProgress((int) (event.getX() / getWidth() * getMax()));
+                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
                 break;
             case MotionEvent.ACTION_UP:
-                setProgress((int) (event.getX() / getWidth() * getMax()));
+                setTouchProgress((int) (event.getX() / getWidth() * getMax()));
                 if (mChangeListener != null) {
                     mChangeListener.OnChange((int) (event.getX() / getWidth() * getMax()));
                 }
@@ -307,6 +306,17 @@ public class LineProgressBar extends View {
     }
 
     private void setProgress(int progress) {
+        if (mTouched) return;
+        mProgress = progress > mMax ? mMax : progress;
+        invalidateView();
+
+        if (mProgress >= mMax && mOnFinishedListener != null) {
+            mOnFinishedListener.onFinish();
+        }
+
+    }
+
+    private void setTouchProgress(int progress) {
 
         mProgress = progress > mMax ? mMax : progress;
         invalidateView();
