@@ -1,4 +1,4 @@
-package com.blackchopper.customprogress;
+package com.hacknife.customprogress;
 
 
 import android.animation.Animator;
@@ -16,12 +16,9 @@ import android.graphics.RectF;
 import android.os.Looper;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
-
-import com.blackchopper.customprogress.R;
 
 
 public class LineProgressBar extends View {

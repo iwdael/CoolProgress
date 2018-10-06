@@ -1,8 +1,7 @@
-package com.blackchopper.demo_customprogress;
+package com.hacknife.demo_customprogress;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ProgressBar;
 
 /**
  * author  : Black Chopper

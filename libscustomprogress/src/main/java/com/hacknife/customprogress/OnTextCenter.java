@@ -1,4 +1,4 @@
-package com.blackchopper.customprogress;
+package com.hacknife.customprogress;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
