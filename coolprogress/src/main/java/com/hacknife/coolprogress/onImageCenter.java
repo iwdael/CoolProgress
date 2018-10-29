@@ -1,4 +1,4 @@
-package com.hacknife.customprogress;
+package com.hacknife.coolprogress;
 
 import android.content.Context;
 import android.graphics.Bitmap;

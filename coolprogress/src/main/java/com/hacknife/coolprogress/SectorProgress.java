@@ -1,4 +1,4 @@
-package com.hacknife.customprogress;
+package com.hacknife.coolprogress;
 
 import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;

@@ -12,7 +12,7 @@
         android:layout_marginTop="200dp"
         android:orientation="vertical">
 
-        <com.hacknife.customprogress.LineProgressBar
+        <com.hacknife.coolprogress.LineProgressBar
 
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -22,7 +22,7 @@
             app:progressDesc="已售"
             app:progressRadius="8dp" />
 
-        <com.hacknife.customprogress.LineProgressBar
+        <com.hacknife.coolprogress.LineProgressBar
             android:id="@+id/line_progresbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -30,7 +30,7 @@
             app:lineborderWidth="2dp"
             app:progressRadius="14dp" />
 
-        <com.hacknife.customprogress.LineProgressBar
+        <com.hacknife.coolprogress.LineProgressBar
             android:id="@+id/line_progresbar2"
             android:layout_width="120dp"
             android:layout_height="10dp"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.hacknife.customprogress.ArcProgress
+            <com.hacknife.coolprogress.ArcProgress
                 android:id="@+id/myProgress"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -62,7 +62,7 @@
                 app:progressStyle="arc" />
 
 
-            <com.hacknife.customprogress.ArcProgress
+            <com.hacknife.coolprogress.ArcProgress
                 android:id="@+id/myProgress01"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.hacknife.customprogress.ArcProgress
+            <com.hacknife.coolprogress.ArcProgress
                 android:id="@+id/myProgress02"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
@@ -89,7 +89,7 @@
                 app:tickDensity="3" />
 
 
-            <com.hacknife.customprogress.ArcProgress
+            <com.hacknife.coolprogress.ArcProgress
                 android:id="@+id/myProgress03"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -113,14 +113,14 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <com.hacknife.customprogress.SectorProgress
+        <com.hacknife.coolprogress.SectorProgress
             android:id="@+id/sectorProgress"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:circleWidth="25dp"
             app:lineWidth="2dp" />
 
-        <com.hacknife.customprogress.SectorProgress
+        <com.hacknife.coolprogress.SectorProgress
             android:id="@+id/sectorProgress1"
             android:layout_width="150dp"
             android:layout_height="150dp"

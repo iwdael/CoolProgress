@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CustomProgress.iml" filepath="$PROJECT_DIR$/CustomProgress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoolProgress.iml" filepath="$PROJECT_DIR$/CoolProgress.iml" />
+      <module fileurl="file://C:\Users\Hacknife\Desktop\CoolProgress\CustomProgress.iml" filepath="C:\Users\Hacknife\Desktop\CoolProgress\CustomProgress.iml" />
       <module fileurl="file://C:\Users\Black Chopper\Desktop\CustomProgress\CustomProgress.iml" filepath="C:\Users\Black Chopper\Desktop\CustomProgress\CustomProgress.iml" />
       <module fileurl="file://D:\Android Project\CustomProgress\CustomProgress.iml" filepath="D:\Android Project\CustomProgress\CustomProgress.iml" />
       <module fileurl="file://C:\Users\alile\Desktop\CustomProgress\CustomProgress.iml" filepath="C:\Users\alile\Desktop\CustomProgress\CustomProgress.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\Android Project\CustomProgress\app\app.iml" filepath="D:\Android Project\CustomProgress\app\app.iml" />
-      <module fileurl="file://C:\Users\alile\Desktop\CustomProgress\app\app.iml" filepath="C:\Users\alile\Desktop\CustomProgress\app\app.iml" />
       <module fileurl="file://C:\Users\Black Chopper\Desktop\CustomProgress\app\app.iml" filepath="C:\Users\Black Chopper\Desktop\CustomProgress\app\app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libscustomprogress/libscustomprogress.iml" filepath="$PROJECT_DIR$/libscustomprogress/libscustomprogress.iml" />
+      <module fileurl="file://C:\Users\Hacknife\Desktop\CoolProgress\app\app.iml" filepath="C:\Users\Hacknife\Desktop\CoolProgress\app\app.iml" />
+      <module fileurl="file://C:\Users\alile\Desktop\CustomProgress\app\app.iml" filepath="C:\Users\alile\Desktop\CustomProgress\app\app.iml" />
+      <module fileurl="file://D:\Android Project\CustomProgress\app\app.iml" filepath="D:\Android Project\CustomProgress\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coolprogress/coolprogress.iml" filepath="$PROJECT_DIR$/coolprogress/coolprogress.iml" />
       <module fileurl="file://C:\Users\alile\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" filepath="C:\Users\alile\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" />
-      <module fileurl="file://C:\Users\Black Chopper\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" filepath="C:\Users\Black Chopper\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" />
       <module fileurl="file://D:\Android Project\CustomProgress\libscustomprogress\libscustomprogress.iml" filepath="D:\Android Project\CustomProgress\libscustomprogress\libscustomprogress.iml" />
+      <module fileurl="file://C:\Users\Hacknife\Desktop\CoolProgress\libscustomprogress\libscustomprogress.iml" filepath="C:\Users\Hacknife\Desktop\CoolProgress\libscustomprogress\libscustomprogress.iml" />
+      <module fileurl="file://C:\Users\Black Chopper\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" filepath="C:\Users\Black Chopper\Desktop\CustomProgress\libscustomprogress\libscustomprogress.iml" />
     </modules>
   </component>
 </project>

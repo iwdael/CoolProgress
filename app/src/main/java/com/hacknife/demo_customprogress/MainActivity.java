@@ -16,11 +16,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.hacknife.customprogress.ArcProgress;
-import com.hacknife.customprogress.LineProgressBar;
-import com.hacknife.customprogress.OnTextCenter;
-import com.hacknife.customprogress.SectorProgress;
-import com.hacknife.customprogress.onImageCenter;
+import com.hacknife.coolprogress.ArcProgress;
+import com.hacknife.coolprogress.LineProgressBar;
+import com.hacknife.coolprogress.OnTextCenter;
+import com.hacknife.coolprogress.SectorProgress;
+import com.hacknife.coolprogress.onImageCenter;
 
 public class MainActivity extends AppCompatActivity {
 

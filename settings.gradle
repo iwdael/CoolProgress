@@ -1,1 +1,1 @@
-include ':app', ':libscustomprogress'
+include ':app', ':coolprogress'

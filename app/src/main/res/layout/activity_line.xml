@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hacknife.customprogress.LineProgressBar
+    <com.hacknife.coolprogress.LineProgressBar
         android:id="@+id/line_pro"
         android:layout_width="match_parent"
         android:layout_height="30dp"
