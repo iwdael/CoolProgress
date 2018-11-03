@@ -120,7 +120,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```Java
 	dependencies {
 	  ...
-          compile 'com.github.hacknife:coolprogress:v1.1.0'
+          compile 'com.hacknife:coolprogress:tag'
 	}
 ```	
 
