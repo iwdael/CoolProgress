@@ -1,1 +1,1 @@
-include ':app', ':coolprogress'
+include ':example', ':coolprogress'

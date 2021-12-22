@@ -1,18 +1,25 @@
 apply from: './../config.gradle'
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.android.application'
 
 android {
     buildToolsVersion buidConfig.buildToolsVersion
     compileSdkVersion buidConfig.compileSdkVersion
     defaultConfig {
+        applicationId "com.iwdael.coolprogress.example"
         minSdkVersion buidConfig.minSdkVersion
         targetSdkVersion buidConfig.targetSdkVersion
         versionCode buidConfig.versionCode
         versionName buidConfig.versionName
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
-    compileOnly dependent.appcompat
+    implementation dependent.kotlinJdk7
+    implementation dependent.appcompat
+    implementation dependent.constraintlayout
+    implementation project(':coolprogress')
 }
