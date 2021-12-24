@@ -1,15 +1,21 @@
 # CoolProgress
-[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/Jcenter-1.1.3-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-apache--2.0-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
+![](https://img.shields.io/badge/platform-android-orange.svg)
+![](https://img.shields.io/badge/language-java-yellow.svg)
+![](https://jitpack.io/v/iwdael/loading.svg)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![](https://img.shields.io/badge/license-apache--2.0-green.svg)
+![](https://img.shields.io/badge/api-19+-green.svg)
+
 CoolProgres是一个进度展示控件，它提供了三种不同风格的progressbar，分别为直线型，圆形，弧形。
 <br>
-![Text Image](https://github.com/hacknife/coolprogress/blob/master/coolprogress.gif)
+![Text Image](https://github.com/iwdael/coolprogress/blob/master/coolprogress.gif)
 <br>
 ## 使用说明
 CustomProgres的使用方法和普通的progressbr的使用方法并没有太大区别，它使用更加灵活，增加了一些自定义属性。
 ### 代码示例
 线型进度条
 ```Java
-        <com.hacknife.coolprogress.LineProgressBar
+        <com.iwdael.coolprogress.LineProgressBar
 
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -19,7 +25,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
             app:progressDesc="已售"
             app:progressRadius="8dp" />
 
-        <com.hacknife.coolprogress.LineProgressBar
+        <com.iwdael.coolprogress.LineProgressBar
             android:id="@+id/line_progresbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -27,7 +33,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
             app:lineborderWidth="2dp"
             app:progressRadius="14dp" />
 
-        <com.hacknife.coolprogress.LineProgressBar
+        <com.iwdael.coolprogress.LineProgressBar
             android:id="@+id/line_progresbar2"
             android:layout_width="120dp"
             android:layout_height="10dp"
@@ -38,7 +44,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```
 圆形进度条
 ```Java
-            <com.hacknife.coolprogress.ArcProgress
+            <com.iwdael.coolprogress.ArcProgress
                 android:id="@+id/myProgress"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -46,7 +52,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:progressStyle="arc" />
 
 
-            <com.hacknife.coolprogress.ArcProgress
+            <com.iwdael.coolprogress.ArcProgress
                 android:id="@+id/myProgress01"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
@@ -54,7 +60,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:radius="80dp"
                 app:tickDensity="3" />
                 
-            <com.hacknife.coolprogress.ArcProgress
+            <com.iwdael.coolprogress.ArcProgress
                 android:id="@+id/myProgress02"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
@@ -66,7 +72,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
                 app:tickDensity="3" />
 
 
-            <com.hacknife.coolprogress.ArcProgress
+            <com.iwdael.coolprogress.ArcProgress
                 android:id="@+id/myProgress03"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -80,14 +86,14 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ```
 弧型进度条
 ```Java
-        <com.hacknife.coolprogress.SectorProgress
+        <com.iwdael.coolprogress.SectorProgress
             android:id="@+id/sectorProgress"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:circleWidth="25dp"
             app:lineWidth="2dp" />
 
-        <com.hacknife.coolprogress.SectorProgress
+        <com.iwdael.coolprogress.SectorProgress
             android:id="@+id/sectorProgress1"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -106,7 +112,7 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ## 如何配置
 将本仓库引入你的项目:
 ### Step 1. 添加JitPack仓库到Build文件
-合并以下代码到项目根目录下的build.gradle文件的repositories尾。[点击查看详情](https://github.com/hacknife/CarouselBanner/blob/master/root_build.gradle.png)
+合并以下代码到项目根目录下的build.gradle文件的repositories尾。
 
 	allprojects {
 		repositories {
@@ -116,11 +122,11 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 	}
   
 ### Step 2. 添加依赖
-合并以下代码到需要使用的application Module的dependencies尾。[点击查看详情](https://github.com/hacknife/CarouselBanner/blob/master/application_build.gradle.png)
+合并以下代码到需要使用的application Module的dependencies尾。
 ```Java
 	dependencies {
 	  ...
-          compile 'com.hacknife:coolprogress:tag'
+          compile 'com.iwdael:coolprogress:$version'
 	}
 ```	
 
@@ -128,4 +134,4 @@ CustomProgres的使用方法和普通的progressbr的使用方法并没有太大
 ## 感谢浏览
 如果你有任何疑问，请加入QQ群，我将竭诚为你解答。欢迎Star和Fork本仓库，当然也欢迎你关注我。
 <br>
-![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/qq_group.png)
+![Image Text](https://github.com/iwdael/CarouselBanner/blob/master/qq_group.png)
